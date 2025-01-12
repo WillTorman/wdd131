@@ -1,0 +1,28 @@
+header {
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: large;
+}
+
+h2 {
+    color: #006EB6;
+    font-size: medium;
+}
+
+main {
+    font-size: 20px;
+    padding-left: 450px;
+    padding-right: 450px;
+}
+
+#list {
+    font-style: italic;
+}
+
+img {
+    padding-top: 40px;
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
