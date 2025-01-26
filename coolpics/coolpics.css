@@ -1,0 +1,57 @@
+body {
+    font-family: Roboto, sans-serif;
+    background-color: rgba(60, 220, 156, 0.607);
+}
+
+header {
+    font-size: 24px;
+    color: black;
+}
+
+hr {
+    background-color: black;
+}
+
+header,
+body,
+footer {
+    max-width: 1000px;
+    margin: 1rem auto;
+    padding: 1rem auto;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+section {
+    padding: 20px;
+}
+
+img {
+    max-width: 100%;
+    /* This fixes distortion */
+    object-fit: cover;
+    height: 250px;
+    width: 250px;
+    border-radius: 10px;
+}
+
+.gallery {
+    padding: 5px
+}
+
+@media screen and (min-width: 500px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1000px) {}
