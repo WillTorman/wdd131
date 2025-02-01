@@ -10,6 +10,31 @@
     --secondary-font: Mooli, san-serif;
 }
 
+.viewer {
+    display: grid;
+    grid-template-rows: 5rem 1fr;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.viewer button {
+    justify-self: right;
+    padding-right: 2rem;
+}
+
+.viewer img {
+    max-width: 100%;
+    /* This fixes distortion */
+    object-fit: cover;
+    max-width: 500px;
+    border-radius: 10px;
+    justify-self: center;
+}
+
 body {
     font-family: var(--primary-font);
     font-size: 1.2em;
@@ -25,6 +50,10 @@ button {
     font-size: 24px;
     border: none;
     background: none;
+}
+
+.hide {
+    display: none;
 }
 
 header,
@@ -69,7 +98,7 @@ section {
     padding: 20px;
 }
 
-img {
+.gallery img {
     max-width: 100%;
     /* This fixes distortion */
     object-fit: cover;
@@ -83,18 +112,35 @@ img {
 }
 
 @media screen and (min-width: 500px) {
-    .gallery {
+
+    .gallery,
+    .hide {
         grid-template-columns: 1fr;
     }
 }
 
 @media screen and (min-width: 700px) {
-    .gallery {
+    .viewer {
+        margin: 100px;
+        border-radius: 10px;
+    }
+
+    .gallery,
+    .hide {
         grid-template-columns: 1fr 1fr;
     }
 }
 
 @media screen and (min-width: 1000px) {
+    .viewer {
+        margin: 100px;
+        border-radius: 10px;
+    }
+
+    .hide {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
     .gallery {
         grid-template-columns: 1fr 1fr 1fr;
     }
