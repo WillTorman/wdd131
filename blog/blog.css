@@ -10,15 +10,14 @@
 }
 
 header {
-    display: flex;
-    justify-items: center;
+    display: grid;
     font-family: var(--primary-font);
     font-size: 1.3em;
 }
 
 /* nav */
 nav {
-    display: flex;
+    display: grid;
     justify-content: end;
     padding-right: 20px;
     font-family: var(--secondary-font);
@@ -42,18 +41,13 @@ nav ul li a {
 
 /* body */
 body {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     font-family: var(--secondary-font);
     color: var(--text-light);
 }
 
-header {
-    display: flex;
-    justify-content: center;
-}
-
-.articles-container {
-    display: flex;
-    flex-direction: column;
+#articles-container,
+article {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
 }
