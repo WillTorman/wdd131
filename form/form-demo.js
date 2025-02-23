@@ -1,10 +1,11 @@
 function togglePaymentDetails(e) {
     // get a reference to the form. We can access all the named form inputs through the form element.
-    const theForm = ;
+    const theForm = document.querySelector('#checkoutForm');
     // we will also need the creditCardContainer and paypalUsernameContainer
-    const creditCardContainer = ;
-    const paypalContainer = ;
-
+    const creditCardContainer = document.querySelector('#creditCardNumberContainer');
+    const paypalContainer = document.querySelector('#paypalUsernameContainer');
+    const creditInput = document.querySelector('#creditCard input');
+    const paypalInput = document.querySelector('#paypalUsernameContainer input')
     // Hide payment containers by adding the '.hide' class to each of them
 
     // Disable required for payment fields...if we hide a required field the browser will throw an error when we try to submit!
@@ -14,6 +15,19 @@ function togglePaymentDetails(e) {
 
     // Show the container based on the selected payment method, and add the required attribute back.
 
+    let value = e.target.value;
+    paypalContainer.classList.add('hide');
+    creditCardContainer.classList.add('hide');
+    paypalInput.required = false;
+    creditInput.required = false;
+
+    if (value == 'creditCard') {
+        creditInput.classList.remove('hide');
+        credit.required = true;
+    } else if (value == 'paypal') {
+        paypalContainer.classList.remove('hide');
+        paypalInput.required = true;
+    }
 }
 
 // attach a change event handler to the paymentMethod input
