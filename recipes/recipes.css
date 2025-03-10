@@ -71,17 +71,26 @@ hr {
     padding: 3px 10px;
 }
 
+.recipe img {
+    padding: 10px;
+    max-width: 300px;
+}
+
 /* Footer */
+
+footer {
+    display: flex;
+    flex-direction: row;
+}
+
 .attribution {
     font-size: 0.06em;
+    align-self: start;
 }
 
-img {
-    max-width: 100%;
-}
 
 .social {
-    max-width: 50px;
+    align-self: end;
 }
 
 .attribution a {
