@@ -81,21 +81,28 @@ hr {
 footer {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .attribution {
     font-size: 0.06em;
-    align-self: start;
-}
-
-
-.social {
-    align-self: end;
+    padding-top: 5px;
 }
 
 .attribution a {
     font-size: 1rem;
-    color: var(--primary-color)
+    color: var(--primary-color);
+    padding: 5px;
+}
+
+.social {
+    display: flex;
+}
+
+.social img {
+    width: 40px;
+    height: auto;
+    padding: 5px;
 }
 
 /* @media screen and (min-width: 550px) {
