@@ -280,7 +280,55 @@ const recipes = [
     }
 ]
 
-const randomIndex = Math.floor(Math.random() * recipes.length);
-const randomObject = recipes[randomIndex];
+function getRandomRecipe(recipeList) {
+    const randomIndex = Math.floor(Math.random() * recipes.length);
+    const randomObject = recipes[randomIndex];
 
-console.log(randomObject);
+    return randomObject;
+}
+
+
+function recipeTemplate(recipe) {
+    return `
+        <img src="${recipe.image}" alt="${recipe.name}">
+            <h2>${tagsTemplate(recipe.tags)}</h2>
+            <h1>${recipe.name}</h1>
+            <span class="rating" role="img" aria-label="Rating: ${recipe.rating} out of 5 stars">
+                ${ratingTemplate(recipe.rating)}
+            </span>
+            <p>${recipe.description}</p>
+    `
+}
+
+function tagsTemplate(tags) {
+    return tags.map((tag) => `<h2>${tag}</h2>`).join(' ');
+}
+
+function ratingTemplate(rating) {
+    let html;
+
+    for (let i = 1; i <= 5; i++) {
+        if (i <= rating) {
+            html = `<span aria-hidden="true" class="icon-star">⭐</span>`
+        } else {
+            `<span aria-hidden="true" class="icon-star-empty">☆</span>`
+        }
+    }
+
+    return html;
+}
+
+function renderRecipes(recipeList) {
+    let recipeContainer = document.querySelector('.recipe');
+    let html = recipeTemplate(recipeList);
+    recipeContainer.innerHTML += html;
+}
+
+function init() {
+    const recipe = getRandomRecipe(recipes);
+    let recipeContainer = document.querySelector('.recipe');
+    recipeContainer.innerHTML = '';
+    renderRecipes(recipe);
+}
+
+init();
