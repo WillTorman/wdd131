@@ -91,17 +91,20 @@ const temples = [
 
         document.querySelector('.next').addEventListener('click', nextTemple);
         document.querySelector('.previous').addEventListener('click', previousTemple);
+
+        // Add event listener for keyboard arrows
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'ArrowRight') {
+                nextTemple();
+            } else if (event.key === 'ArrowLeft') {
+                previousTemple();
+            }
+        });
     }
     
     function tagsTemplate(tags) {
         return tags.map((tag) => `<h2>${tag}</h2>`).join(' ');
     }
-    
-    // function renderRecipes(recipeList) {
-    //     let recipeContainer = document.querySelector('.recipe');
-    //     let html = recipeTemplate(recipeList);
-    //     recipeContainer.innerHTML += html;
-    // }
     
     function init() {
         carousel(temples);
