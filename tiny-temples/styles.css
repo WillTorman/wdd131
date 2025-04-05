@@ -22,6 +22,9 @@ header {
     justify-content: center;
     align-content: center;
     padding: 20px;
+    background-color: var(--primary-color);
+    padding: 5px;
+    border-radius: 10px;
 }
 
 .branding {
@@ -36,6 +39,7 @@ header img {
     max-width: 150px;
     justify-self: center;
     grid-row: 1/2;
+    border-radius: 7px;
 }
 
 header h1 {
@@ -56,14 +60,49 @@ hr {
     width: 100%;
 }
 
-/* Carousel */
-.carousel {
+/* Main */
+main {
+    padding: 20px;
+}
+
+/* Carousel Container */
+.carousel-container {
+    position: relative;
     display: flex;
-    flex-direction: row;
     justify-content: center;
+    align-items: center;
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
+}
+
+.carousel-container button {
+    position: absolute;
+    background-color: var(--primary-color);
+    border: var(--secondary-color);
+    border-radius: 5px;
+    border-style: solid;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+button.previous {
+    left: -60px;
+}
+
+button.next {
+    right: -100px;
+}
+
+/* Carousel */
+.carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .carousel img {
@@ -81,41 +120,69 @@ hr {
     box-shadow: 0 4px 8px rgba(255, 210, 8, 0.9);
 }
 
+.carousel h2 {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 0.25rem 0;
+}
+
 body {
     font-family: var(--primary-font);
     font-size: 1.2em;
 }
 
+/* Footer */
 a:link,
 a:visited {
     color: var(--accent-color);
 }
 
-/* Footer */
-
 footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.attribution {
-    font-size: 0.06em;
-    padding-top: 5px;
-}
-
-.attribution a {
-    font-size: 1rem;
-    color: var(--primary-color);
-    padding: 5px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
 }
 
 .social {
     display: flex;
 }
 
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 1.2em;
+    color: var(--text-dark);
+}
+
 .social img {
     width: 40px;
     height: auto;
     padding: 5px;
+}
+
+
+@media (min-width: 700px) {
+    header img {
+        max-width: 225px;
+        justify-self: center;
+        grid-row: 1/2;
+        border-radius: 7px;
+    }
+    .carousel {
+        flex-direction: row; /* Change layout to row for larger screens */
+        align-items: flex-start; /* Align items at the top */
+        text-align: left; /* Align text to the left */
+    }
+
+    .carousel img {
+        margin-right: 20px; /* Add spacing between image and text */
+    }
+
+    .carousel-content {
+        margin-top: 0; /* Remove top margin for larger screens */
+    }
 }
