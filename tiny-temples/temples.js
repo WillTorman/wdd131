@@ -1,60 +1,67 @@
 const temples = [
     {
+        name: 'Temples',
+        dateDedicated: '04/06/1893',
+        tags: ['Rexburg', 'Idaho Falls', 'Meridian', 'Boise', 'Gilbert', 'Washington D.C.', 'Los Angeles'],
+        description: 'Various temples that have been printed and enjoyed by customers like you!',
+        image: './images/lot.jpg'
+    },
+    {
         name: 'Salt Lake Temple',
         dateDedicated: '04/06/1893',
         tags: ['Utah', 'Salt Lake'],
         description: 'It is a temple',
-        image: './images/slc.jpg',
+        image: './images/slc.jpg'
     },
     {
         name: 'Rexburg Idaho Temple',
         dateDedicated: '02/10/2008',
         tags: ['Idaho', 'Rexburg'],
         description: 'It is a temple',
-        image: './images/rexburg.jpg',
+        image: './images/rexburg.jpg'
     },
     {
         name: 'Washington D.C. Temple',
         dateDedicated: '11/19/1974',
         tags: ['Virginia', 'Washington D.C.'],
         description: 'It is a temple',
-        image: './images/dc.jpg',
+        image: './images/dc.jpg'
     },
     {
         name: 'Idaho Falls Temple',
         dateDedicated: '09/23/1945',
         tags: ['Idaho', 'Idaho Falls'],
         description: 'It is a temple',
-        image: './images/idaho-falls.jpg',
+        image: './images/idaho-falls.jpg'
     },
     {
         name: 'Nauvoo Temple',
         dateDedicated: '05/01/2002',
         tags: ['Illinois', 'Nauvoo', 'Historic', 'Engraving'],
         description: 'It is a temple',
-        image: './images/engrave.jpg',
+        image: './images/engrave.jpg'
     },
     {
         name: 'Meridian Idaho Temple',
         dateDedicated: '12/15/2019',
         tags: ['Idaho', 'Meridian'],
         description: 'All temples are about 3 to 5 inches in length. Here is a picture of the Meridian Idaho Temple for reference.',
-        image: './images/scale-top.jpg',
+        image: './images/scale-top.jpg'
     },
     {
         name: 'Gilbert Arizona Temple',
         dateDedicated: '03/02/2014',
         tags: ['Arizona', 'Gilbert'],
         description: 'It is a temple',
-        image: './images/gilbert.jpg',
-    },
+        image: './images/gilbert.jpg'
+    }
     ]
     
     function templeTemplate(temple) {
         return `
             <img src="${temple.image}" alt="${temple.name}">
             <div class="carousel-content">
-                <h2>${temple.tags.join(', ')}</h2> <!-- Display tags -->
+                <h2>${temple.tags.join(', ')}</h2>
                 <h1>${temple.name}</h1>
                 <p>${temple.description}</p>
             </div>

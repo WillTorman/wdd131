@@ -87,11 +87,11 @@ main {
 }
 
 button.previous {
-    left: -60px;
+    left: -120px;
 }
 
 button.next {
-    right: -100px;
+    right: -120px;
 }
 
 /* Carousel */
@@ -117,7 +117,7 @@ button.next {
 .carousel img:hover {
     transform: scale(1.05);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    box-shadow: 0 4px 8px rgba(255, 210, 8, 0.9);
+    box-shadow: 0 4px 8px rgba(50, 245, 255, 0.615);
 }
 
 .carousel h2 {
@@ -129,6 +129,7 @@ button.next {
 body {
     font-family: var(--primary-font);
     font-size: 1.2em;
+    background-color: var(--accent1-color);
 }
 
 /* Footer */
