@@ -166,6 +166,40 @@ footer {
 }
 
 
+/* Payment Container */
+.payment-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 25px; /* Keep the card padded from header to footer */
+    background-color: var(--accent1-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.payment-container img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.payment-container h1 {
+    padding: 10px;
+}
+
+.payment-container h2 {
+    padding: 10px;
+}
+
+.payment-container p {
+    padding: 10px;
+}
+
+
+
 @media (min-width: 700px) {
     header img {
         max-width: 225px;
